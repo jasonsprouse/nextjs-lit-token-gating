@@ -13,23 +13,23 @@ import {
 
 
 export default function Protected(props) {
-  const [rendered, setRendered] = useState(false)
-  
-  if (!props.authorized) {
-    return (
-      <h2>Unauthorized</h2>
-    )
-  }
+  const [rendered, setRendered] = useState(false);
+  const [aframeLoaded, setAframeLoaded] = useState(false);
 
   useEffect(() => {
     setRendered(true);
 
-  if (typeof window !== 'undefined') {
-    require('aframe'); // eslint-disable-line global-require
+    if (typeof window !== 'undefined') {
+      require('aframe'); // eslint-disable-line global-require
+      setAframeLoaded(true);
+    }
+  }, []);
+
+  if (!props.authorized) {
+    return <h2>Unauthorized</h2>;
   }
-  }, [setRendered]);
-  
-  if (!rendered) {
+
+  if (!rendered || !aframeLoaded) {
     return <>loading</>;
   }
   

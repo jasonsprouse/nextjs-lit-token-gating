@@ -1,7 +1,7 @@
 This is a minimal example of how to token-gate a Next.js page using [Lit Protocol](https://developer.litprotocol.com/) using `getServerSideProps`.
 
 
-This token gates a `/protected` page checking to see if the user has a [Devs for Revolution](https://etherscan.io/address/0x25ed58c027921e14d86380ea2646e3a1b5c55a8b) ERC721 token.
+This token gates a `/protected` page checking to see if the user has a [Good Faith Paradigm](https://etherscan.io/address/0xd07dc4262BCDbf85190C01c996b4C06a461d2430) ERC1155 token.
 
 To run this example:
 
@@ -20,12 +20,13 @@ npm install
 ```javascript
 const accessControlConditions = [
   {
-    contractAddress: '0x25ed58c027921E14D86380eA2646E3a1B5C55A8b',
-    standardContractType: 'ERC721',
+    contractAddress: '0xd07dc4262BCDbf85190C01c996b4C06a461d2430',
+    standardContractType: 'ERC1155',
     chain: 'ethereum',
     method: 'balanceOf',
     parameters: [
-      ':userAddress'
+      ':userAddress',
+      '490643'
     ],
     returnValueTest: {
       comparator: '>',
