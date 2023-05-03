@@ -8,12 +8,13 @@ import { UUIDContext } from '../context'
 
 const accessControlConditions = [
   {
-    contractAddress: '0x25ed58c027921E14D86380eA2646E3a1B5C55A8b',
-    standardContractType: 'ERC721',
+    contractAddress: '0xd07dc4262BCDbf85190C01c996b4C06a461d2430',
+    standardContractType: 'ERC1155',
     chain: 'ethereum',
     method: 'balanceOf',
     parameters: [
-      ':userAddress'
+      ':userAddress',
+      '490643'
     ],
     returnValueTest: {
       comparator: '>',
@@ -62,7 +63,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>Developer DAO Access</h1>
+      <h1>Good Faith Paradigm DAO Access</h1>
       {
         !connected && <button onClick={connect}>Connect</button>
       }
