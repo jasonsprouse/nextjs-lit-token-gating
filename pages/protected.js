@@ -24,9 +24,9 @@ export default function Protected(props) {
   useEffect(() => {
     setRendered(true);
 
-    if (typeof window !== 'undefined') {
-      require('aframe'); // eslint-disable-line global-require
-    }
+  if (typeof window !== 'undefined') {
+    require('aframe'); // eslint-disable-line global-require
+  }
   }, [setRendered]);
   
   if (!rendered) {
