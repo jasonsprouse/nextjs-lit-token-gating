@@ -1,7 +1,7 @@
-This is a minimal example of how to token-gate a Next.js page using [Lit Protocol](https://developer.litprotocol.com/) using `getServerSideProps`.
+This is a minimal example of how to token-gate VR Next.js page using [Lit Protocol](https://developer.litprotocol.com/) using `getServerSideProps`.
 
 
-This token gates a `/protected` page checking to see if the user has a [Good Faith Paradigm](https://etherscan.io/address/0xd07dc4262BCDbf85190C01c996b4C06a461d2430) ERC1155 token.
+This token gates a `/protected` page checking to see if the user has a [Good Faith Paradigm](https://etherscan.io/address/0xd07dc4262BCDbf85190C01c996b4C06a461d2430) ERC1155 `token #490643`.
 
 To run this example:
 
