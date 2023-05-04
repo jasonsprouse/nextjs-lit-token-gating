@@ -1,4 +1,6 @@
-This is a minimal example of how to token-gate VR Next.js page using [Lit Protocol](https://developer.litprotocol.com/) using `getServerSideProps`.
+![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=https://nextjs-lit-token-gating.vercel.app/)
+
+This is a minimal example of how to token-gate VR Next.js page using [Lit Protocol](https://developer.litprotocol.com/) using `getServerSideProps` using aframe-react to render a VR scene.
 
 
 This token gates a `/protected` page checking to see if the user has a [Good Faith Paradigm](https://etherscan.io/address/0xd07dc4262BCDbf85190C01c996b4C06a461d2430) ERC1155 `token #490643`.
